@@ -1,0 +1,119 @@
+:root {
+  --bg-color: #000000; /* Black */
+  --text-color: #ffffff; /* White */
+  --accent-color: #b50707; /* Red */
+  --border-color: #333333; /* Optional darker color for borders */
+}
+
+/* Apply the theme globally */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--text-color);
+  color: var(--accent-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Sidebar styles */
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: var(--bg-color); /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-link {
+  display: block;
+  text-align: center;
+  padding: 15px 20px;
+  margin: 20px 0;
+  color: var(--text-color);
+  font-size: 18px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  position: relative; /* Needed for the pseudo-element */
+  transition: background-color 0.6s ease, color 0.6s ease; /* Slower animation */
+}
+
+.sidebar-link.active::before {
+  content: '';
+  position: absolute;
+  left: -20px; /* Positioned slightly to the left */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px; /* Thickness of the line */
+  height: 30px; /* Height of the line */
+  background-color: var(--accent-color); /* The color of the line */
+  border-radius: 10px; /* Rounded corners for the line */
+  opacity: 1; /* Ensure the line is visible */
+  transition: left 0.6s ease, opacity 0.6s ease, background-color 0.6s ease; /* Slower line animation */
+}
+
+.sidebar-link:not(.active):hover {
+  background-color: rgb(53, 0, 0); /* Change to dark red when hovered */
+  color: var(--text-color); /* Ensure the text stays white */
+}
+
+.sidebar-link.active {
+  background-color: var(--accent-color); /* Red for active */
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-link:not(.active)::before {
+  opacity: 0; /* Hide the line */
+  left: -20px; /* Move the line further to the left */
+  transition: left 0.6s ease, opacity 0.6s ease; /* Slower line hide animation */
+}
+
+/* Make your headings stand out */
+h1, h2, h3 {
+  color: var(--text-color);
+}
+
+/* Content area style */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
