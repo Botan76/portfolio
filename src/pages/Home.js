@@ -1,10 +1,24 @@
 import React from "react";
+import '../styles/Home.css'; // Import the Home.css file
+import myPicture from '../assets/profilePic.png'; // Replace with the actual image file path
 
 const Home = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold">Welcome to My Portfolio</h1>
-      <p>This is the home section of the portfolio.</p>
+    <div className="home-container">
+      {/* Left Side: Name and Title */}
+      <div className="home-text">
+        <h1>Bootan Majeed</h1>
+        <p>Software Developer</p>
+        <p>Experienced in building apps for both Android and iOS using SwiftUI and Kotlin Compose.</p>
+      </div>
+
+      {/* Right Side: Picture */}
+      <div className="home-image">
+        <img
+          src={myPicture}
+          alt="Bootan Majeed"
+        />
+      </div>
     </div>
   );
 };

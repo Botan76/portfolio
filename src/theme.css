@@ -1,3 +1,8 @@
+/* Import all modular styles */
+@import url('./styles/_variables.css');
+@import url('./styles/global.css');
+@import url('./styles/project.css');
+
 :root {
   --bg-color: #000000; /* Black */
   --text-color: #ffffff; /* White */

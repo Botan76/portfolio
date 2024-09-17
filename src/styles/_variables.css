@@ -1,0 +1,10 @@
+/* _variables.css */
+
+/* Root colors for dark theme */
+:root {
+    --bg-color: #000000; /* Black */
+    --text-color: #ffffff; /* White */
+    --accent-color: #b50707; /* Red */
+    --border-color: #333333; /* Optional darker color for borders */
+  }
+  

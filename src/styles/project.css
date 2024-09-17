@@ -1,0 +1,68 @@
+/* project.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+/* Container for the project section */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Title styling */
+  .title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    color: var(--text-color);
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+  
+  /* Project Grid */
+  .project-grid {
+    display: flex;
+    gap: 2rem; /* Space between the boxes */
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allows wrapping of items if the screen is too small */
+  }
+  
+  /* Individual Project Card */
+  .project-card {
+    width: 300px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--text-color);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px); /* Animation on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Project Image */
+  .project-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Typography for the project title and description */
+  .project-card h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    color: var(--accent-color);
+  }
+  
