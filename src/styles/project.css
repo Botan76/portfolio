@@ -19,6 +19,19 @@
     margin-bottom: 3.5rem;
     text-align: center;
   }
+  .description-container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+    color: var(--text-color);
+  }
+  
   
   /* Project Grid */
   .project-grid {
@@ -65,4 +78,22 @@
     font-size: 1rem;
     color: var(--accent-color);
   }
+  .screenshots-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
   
+  .screenshot-image {
+    width: 150px; /* Adjust width as necessary */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .screenshot-image:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+  }
