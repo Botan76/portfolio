@@ -2,22 +2,8 @@
 @import url('./styles/_variables.css');
 @import url('./styles/global.css');
 @import url('./styles/project.css');
+@import url('./styles/about.css');
 
-:root {
-  --bg-color: #000000; /* Black */
-  --text-color: #ffffff; /* White */
-  --accent-color: #b50707; /* Red */
-  --border-color: #333333; /* Optional darker color for borders */
-}
-
-/* Apply the theme globally */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
 a {
   color: var(--accent-color);
@@ -53,25 +39,28 @@ button:hover {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 200px;
+  width: 100%; /* Full width of the screen */
+  height: 65px; /* Adjust height as needed */
   background-color: var(--bg-color); /* Dark background */
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+  z-index: 1000; /* Ensure it's on top */
 }
 
 .sidebar ul {
+  display: flex; /* Align items horizontally */
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar-link {
   display: block;
   text-align: center;
   padding: 15px 20px;
-  margin: 20px 0;
+  margin: 0 15px; /* Space between the items */
   color: var(--text-color);
   font-size: 18px;
   background-color: var(--bg-color);
@@ -84,15 +73,13 @@ button:hover {
 .sidebar-link.active::before {
   content: '';
   position: absolute;
-  left: -20px; /* Positioned slightly to the left */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 5px; /* Thickness of the line */
-  height: 30px; /* Height of the line */
-  background-color: var(--accent-color); /* The color of the line */
-  border-radius: 10px; /* Rounded corners for the line */
-  opacity: 1; /* Ensure the line is visible */
-  transition: left 0.6s ease, opacity 0.6s ease, background-color 0.6s ease; /* Slower line animation */
+  bottom: -10px; /* Underline at the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Width of the underline */
+  height: 3px;
+  background-color: var(--accent-color); /* Accent color */
+  border-radius: 5px; /* Rounded underline */
 }
 
 .sidebar-link:not(.active):hover {
@@ -119,6 +106,5 @@ h1, h2, h3 {
 
 /* Content area style */
 .content {
-  margin-left: 220px;
-  padding: 20px;
+  padding-top: 80px; /* Add top padding to account for the header */
 }

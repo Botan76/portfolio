@@ -1,0 +1,31 @@
+/* General container styling */
+.about-container {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for some depth */
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    background-color: transparent; /* Remove the white background */
+  }
+  
+  /* Title styling */
+  .about-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e7e7e7; /* Dark text color */
+    margin-bottom: 1rem;
+  }
+  
+  /* Paragraph styling */
+  .about-container p {
+    font-size: 1.1rem;
+    color: #acacac; /* Soft text color for better readability */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Hover effect on the container */
+  .about-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+  }
+  

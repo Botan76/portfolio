@@ -2,10 +2,15 @@
 
 /* Global styles */
 body {
+  
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    cursor: url('../assets/cursor.png'), auto;
+  }
+  .custom-cursor {
+    cursor: url('../assets/cursor.png'), auto; /* 'auto' is the fallback if the image fails to load */
   }
   
